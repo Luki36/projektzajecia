@@ -106,6 +106,8 @@ public class Shop implements Comparator<Product> {
         //TODO odwrotne sortowanie
     }
 
+    //TODO dodanie nowego projektu jako osobne repozytoritum na Gitcie pod nazwą carProject
+
     public String getShopName() {
         return shopName;
     }
