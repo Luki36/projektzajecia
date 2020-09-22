@@ -100,7 +100,6 @@ public class Shop implements Comparator<Product> {
 
     public void streamProductByCapacity() {
         //TODO
-        productList.stream().sorted(this::compare).forEach(s -> System.out.println("Produkt o nazwie: " + s.getName() + " ma cenę: " + s.getPrice()));
     }
 
     public void streamProductByWeight() {
