@@ -6,4 +6,7 @@ public interface Product {
     double getWeight();
     double getPriceShipment();
     double getCapacity();
+
+    //Double = null vs double = 0.0
+    //boolean vs Boolean
 }

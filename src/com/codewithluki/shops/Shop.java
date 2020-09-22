@@ -30,7 +30,7 @@ public class Shop implements Comparator<Product> {
     }
 
 
-    private boolean checkProductListIsNull() {
+    private boolean checkProductListIsNull() {// metoda która sprawdza czy lista produktów istnieje
         if (productList == null) {
             System.out.println("Sklep o nazwie " + getShopName() + " posiada pusta listę produktów");
             return true;
@@ -95,12 +95,15 @@ public class Shop implements Comparator<Product> {
     }
 
     public void streamProduct() {
+        productList.stream().sorted(this::compare).forEach(s -> System.out.println("Produkt o nazwie: " + s.getName() + " ma cenę: " + s.getPrice()));
+    }
 
-        productList.
-                stream()
-                .sorted(this::compare)
-                .forEach(s-> System.out.println("Produkt o nazwie: " + s.getName() + " ma cenę: " + s.getPrice()));
+    public void streamProductByCapacity() {
+        //TODO
+    }
 
+    public void streamProductByWeight() {
+        //TODO odwrotne sortowanie
     }
 
     public String getShopName() {

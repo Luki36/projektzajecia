@@ -5,12 +5,8 @@ package com.codewithluki;
 
 import com.codewithluki.dataproduct.*;
 import com.codewithluki.product.Fridge;
-import com.codewithluki.product.Product;
 import com.codewithluki.shops.Shop;
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 
 
 public class Application {
