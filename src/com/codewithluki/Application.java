@@ -41,6 +41,12 @@ public class Application {
 
         shop.printShopProducts();
 
+        shop.streamProduct();
+
+        shop.streamProductByCapacity();
+
+        shop.streamProductByWeight();
+
         System.out.println("Podejście nr 1 z przekazaniem instancji klasy w konstruktorze");
 
         MultiCurrencyShop multiCurrencyShop = new MultiCurrencyShop(new Fridge());
@@ -63,7 +69,7 @@ public class Application {
         System.out.println("Cena lodówki po przeliczeniu w euro: " + MultiCurrencyShop.getEuroPriceValue(fridge2.getPrice()));
         System.out.println("Cena lodówki po przeliczeniu w dolarach:"  + MultiCurrencyShop.getDolarPriceValue(fridge2.getPrice()));
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        shop.streamProduct();
+
 
     }
 }

@@ -94,16 +94,32 @@ public class Shop implements Comparator<Product> {
         return result;
     }
 
+    public int compareByCapacyty(Product o1, Product o2) {
+        return Double.compare(o1.getCapacity(), o2.getCapacity());
+    }
+
+    public int compareByWeight(Product o1, Product o2) {
+        return Double.compare(o1.getWeight(), o2.getWeight());
+    }
+
     public void streamProduct() {
-        productList.stream().sorted(this::compare).forEach(s -> System.out.println("Produkt o nazwie: " + s.getName() + " ma cenę: " + s.getPrice()));
+        productList.stream().sorted(this::compare).forEach(s -> System.out.println
+                ("Produkt o nazwie: " + s.getName() + " ma cenę: " + s.getPrice()));
     }
 
     public void streamProductByCapacity() {
-        //TODO
+        productList.stream().sorted(this::compareByCapacyty).forEach(s -> System.out.println
+                (" Produkt o nazwie " + s.getName() + " ma objętość " + s.getCapacity()));
     }
 
     public void streamProductByWeight() {
         //TODO odwrotne sortowanie
+
+        productList
+                .stream()
+                .sorted(((o1, o2) -> Double.compare(o2.getWeight(), o1.getWeight())))
+                .forEach(s -> System.out.println
+                        ("Produkt o nazwie " + s.getName() + " Produkt ma Wagę " + s.getWeight()));
     }
 
     //TODO dodanie nowego projektu jako osobne repozytoritum na Gitcie pod nazwą carProject
